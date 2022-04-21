@@ -12,9 +12,9 @@ const UpdateTask = require('./routes/task')
 const deleteTask = require('./routes/task')
 const notFound = require('./middleware/not_found')
 const port=process.env.PORT || 9000
-app.get('/',function(req,res){
-    res.send('Hello world')
-}) 
+// app.get('/',function(req,res){
+//     res.send('Hello world')
+// }) 
 // middleware
 app.use(express.static('./public'))
 app.use(express.json())
