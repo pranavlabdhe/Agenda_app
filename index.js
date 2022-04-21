@@ -1,8 +1,8 @@
 require('./db/connect')
 const express = require('express');
 const app = express();
-const server = 'localhost';
-
+// const server = 'localhost';
+const server = '0.0.0.0';
 const connectDB = require('./db/connect')
 require('dotenv').config();
 const tasks = require('./routes/task')
