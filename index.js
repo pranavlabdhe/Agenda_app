@@ -2,7 +2,7 @@ require('./db/connect')
 const express = require('express');
 const app = express();
 const server = 'localhost';
-const port=9000
+
 const connectDB = require('./db/connect')
 require('dotenv').config();
 const tasks = require('./routes/task')
@@ -10,7 +10,8 @@ const createTask = require('./routes/task')
 const getTask = require('./routes/task')
 const UpdateTask = require('./routes/task')
 const deleteTask = require('./routes/task')
-
+const notFound = require('./middleware/not_found')
+const port=process.env.PORT || 9000
 // app.get('/',function(req,res){
 //     res.send('Hello world')
 // }) 
@@ -22,6 +23,7 @@ app.use(express.json())
 
 app.use('/api/v1/tasks',tasks)
 app.use('/api/v1/tasks/createTask',createTask)
+app.use(notFound)
 // app.use('/api/v1/tasks/:id',getTask)
 // app.use('/api/v1/tasks/:id',UpdateTask)
 // app.use('/api/v1/tasks/:id',deleteTask)
