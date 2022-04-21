@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "author": "LA Pranav",
   "license": "ISC",
@@ -16,6 +16,6 @@
     "nodemon": "^2.0.15"
   },
   "engines": {
-    "node": "14.17.3"
+    "node": "14.x"
   }
 }
